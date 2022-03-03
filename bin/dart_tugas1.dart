@@ -31,4 +31,47 @@ void main(List<String> arguments) {
           print("");
       }
   }
+  else {
+    int result =1;
+    int k = number-1;
+    for(int i=0; i<number; i++) {
+      bool space = false;
+      for(int j=0; j<number;j++) {
+        if(i<=number/2){
+            if(j>=(number/2-i).toInt() && j<=(number/2+i).toInt()){
+            if(space) {
+              stdout.write(" ");
+              space = false;
+            }
+            else {
+              stdout.write(result);
+              space = true;
+            }
+          }
+          else{
+            stdout.write("*");
+          }  
+        }
+        else{
+          if(j>=(number/2-k).toInt() && j<=(number/2+k).toInt()){
+            if(space) {
+              stdout.write(" ");
+              space = false;
+            }
+            else {
+              stdout.write(result);
+              space = true;
+            }
+          }
+          else{
+            stdout.write("*");
+          } 
+        }
+        
+      }
+      k--;
+      result++;
+      print("");
+    }
+  }
 }
